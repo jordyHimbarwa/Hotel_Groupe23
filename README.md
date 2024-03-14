@@ -36,3 +36,6 @@ java SimilaritySearch <queryImageFile> <imageDatasetDirectory>
 
 ## STUDENT NAME: ELIEL BEONAO
 ## STUDENT NUMBER: 300326742
+
+## STUDENT NAME: Dallaire Cubahiro
+## STUDENT NUMBER: 300304712
