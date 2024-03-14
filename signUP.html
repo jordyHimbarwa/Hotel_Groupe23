@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
+
 <body>
     <header>
-        <h1>Sign Up</h1>
+        <h1>Logo</h1>
         <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Login</a></li>
-                <!-- You may want to remove the Sign Up link from this page -->
-            </ul>
+        <nav class="navigation">
+            <a href="#">Home</a></li>
+            <a href="#">About</a></li>
+            <a href="#">Contact</a></li>
+            <button class="login">Login</button>
+            <!-- You may want to remove the Sign Up link from this page -->
         </nav>
     </header>
 
-    <main>
-        <section id="signup-form">
-            <h2>Create an Account</h2>
-            <form action="signup.php" method="post">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Sign Up</button>
-            </form>
-        </section>
-    </main>
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
 
-    <footer>
-        <!-- Footer content -->
-        <p>&copy; 2024 Hotel Booking Website. All rights reserved.</p>
-    </footer
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <script type="module"
+                            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
