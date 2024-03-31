@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+</head>
+
+<body>
+    <h1>Inscription</h1>
+    <form id="signupForm" action="/client" method="post">
+        <div>
+            <label for="nas">NAS :</label>
+            <input type="text" id="nas_cli" name="nas" required>
+        </div>
+        <div>
+            <label for="nom_complet">Nom complet :</label>
+            <input type="text" id="nom_complet_cli" name="nom_complet" required>
+        </div>
+        <div>
+            <label for="date_signup">Date d'inscription :</label>
+            <input type="date" id="date_creation_cli" name="date_signup" required>
+        </div>
+        <div>
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse" required>
+        </div>
+        <button type="submit">S'inscrire</button>
+    </form>
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const formData = new FormData(this);
+
+            // Send form data to the server using fetch API
+            fetch('/client', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json(); // Parse response JSON if successful
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(data => {
+                    console.log('Server response:', data);
+                    // Handle successful response from the server (if needed)
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                    // Handle errors (if needed)
+                });
+        });
+    </script>
+</body>
+
+</html>
